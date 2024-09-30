@@ -64,12 +64,16 @@ function ejercicio8() {
 
 
 function ejercicio9() {
-    const frutas = ['manzana', 'banana', 'pera', 'naranja', 'durazno', 'uva', 'kiwi', 'frutilla', 'sandía', 'limón'];
-    const fruta = prompt("Ingresa una fruta:");
-    const resultado = buscarFruta(frutas, fruta);
-    document.getElementById("resultado").innerHTML = resultado;
+    const frutas = ["manzana", "banana", "naranja", "fresa", "kiwi", "mango", "pera", "uva", "durazno", "sandía"];
+    const frutasLista = frutas.join(', ');
+    const frutaBuscada = prompt(`Lista de frutas: ${frutasLista}\nIngresa una fruta para buscar:`).toLowerCase();
+    
+    if (frutas.includes(frutaBuscada)) {
+        document.getElementById("resultado").innerHTML = `Sí, tenemos ${frutaBuscada}!`;
+    } else {
+        document.getElementById("resultado").innerHTML = `No, no tenemos ${frutaBuscada}!`;
+    }
 }
-
 
 
 function ejercicio10() {
