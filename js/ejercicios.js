@@ -62,3 +62,24 @@ function ejercicio8() {
     document.getElementById("resultado").innerHTML = resultado;
 }
 
+
+function ejercicio9() {
+    const frutas = ['manzana', 'banana', 'pera', 'naranja', 'durazno', 'uva', 'kiwi', 'frutilla', 'sandía', 'limón'];
+    const fruta = prompt("Ingresa una fruta:");
+    const resultado = buscarFruta(frutas, fruta);
+    document.getElementById("resultado").innerHTML = resultado;
+}
+
+
+
+function ejercicio10() {
+    const nombre = prompt("Ingresa tu nombre:");
+    const fechaNacimiento = prompt("Ingresa tu fecha de nacimiento (YYYY-MM-DD):");
+    const edad = calcularEdad(fechaNacimiento);
+
+    if (edad === null) {
+        document.getElementById("resultado").innerHTML = "La fecha ingresada no se puede. es invalida";
+    } else {
+        document.getElementById("resultado").innerHTML = `Hola ${nombre}, tienes ${edad} años!`;
+    }
+}

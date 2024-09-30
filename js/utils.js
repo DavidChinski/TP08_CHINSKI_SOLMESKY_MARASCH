@@ -44,3 +44,28 @@ function realizarComparaciones() {
     resultado.push(`D. true == 1: ${true == 1}`); 
     return resultado.join();
 }
+
+	
+function buscarFruta(frutas, fruta) {
+    if (frutas.includes(fruta.toLowerCase())) {
+        return `Sí, tenemos ${fruta}!`;
+    } else {
+        return `No, no tenemos ${fruta}!`;
+    }
+}
+function calcularEdad(fechaNacimiento) {
+    const nacimiento = new Date(fechaNacimiento);
+    if (isNaN(nacimiento) || nacimiento > new Date()) {
+        return null;
+    }
+
+    const hoy = new Date();
+    let edad = hoy.getFullYear() - nacimiento.getFullYear();
+    const mes = hoy.getMonth() - nacimiento.getMonth();
+    
+    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+        edad--;
+    }
+    
+    return edad;
+}
