@@ -38,3 +38,27 @@ function ejercicio6() {
     const resultado = duplicarNumeros(arrayNumeros);
     document.getElementById("resultado").innerHTML = `Array duplicado: ${resultado.join(', ')}`;
 }
+
+function ejercicio7() {
+    const ciudad = crearCiudad();
+    
+    let informacionDeLaCiudad = ''; 
+
+  
+    for (let propiedad in ciudad) {
+        if (ciudad.hasOwnProperty(propiedad)) {
+           
+            informacionDeLaCiudad += `${propiedad}: ${ciudad[propiedad]}, `;
+        }
+    }
+
+    document.getElementById("resultado").innerHTML = `Información de la ciudad: ${ciudadInfo}`;
+    
+}
+
+
+function ejercicio8() {
+    const resultado = realizarComparaciones();
+    document.getElementById("resultado").innerHTML = resultado;
+}
+
